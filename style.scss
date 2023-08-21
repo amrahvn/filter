@@ -8,14 +8,16 @@
   
   input {
     outline: none;
-    padding: 8px 44px;
+    padding: 8px 70px;
+    border: 1px solid #dcdedf;
+    border-radius: 8px;
   }
   
   .commondiv {
     background-color: #fff;
-    margin: 60px 200px;
+    margin: 60px 60px;
     box-sizing: border-box;
-    border: 1px solid #dcdedf;
+    border: 2px solid #dcdedf;
     height: 300px;
     position: relative;
   
@@ -32,9 +34,11 @@
       border: 1px solid #dcdedf;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
       z-index: 1;
-      width: 30%;
+      width: 325px;
       flex-wrap: nowrap;
-      li {
+      overflow-y: scroll;
+      height: 200px;
+      
         padding: 5px;
         transition: background-color 0.2s;
         flex-wrap: nowrap;
@@ -46,17 +50,20 @@
   
     .updiv,
     .downdiv {
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 40px;
+      margin: 40px 100px;
       span {
         display: block;
         border: 1px solid #dcdedf;
-        padding: 8px 118px;
         cursor: pointer;
         transition: background-color 0.2s;
         white-space: nowrap;
+        width: 324px;
+        height: 44px;
+        border-radius: 8px;
         &:hover {
           background-color: #f5f5f5;
         }
@@ -65,6 +72,8 @@
   
     a {
       text-decoration: none;
+      margin-left: 100px;
+      color: #B1924C;
     }
   
     button {
@@ -82,7 +91,7 @@
       box-shadow: none !important;
       border: none;
       transition: 0.4s;
-  
+      margin: 14px 98px;
       &:hover {
         background-color: #000;
         color: #fff;
@@ -92,5 +101,6 @@
     .d-none {
       display: none;
     }
-  }
   
+  
+
