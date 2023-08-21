@@ -3,9 +3,9 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    var divElement = document.querySelector(".updivspan");
-    var ulElement = divElement.querySelector("ul");
-    var spanElement = divElement.querySelector(".span");
+    let divElement = document.querySelector(".updivspan1");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span1");
 
     divElement.addEventListener("click", function(event) {
         if (ulElement.classList.contains("d-none")) {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ulElement.classList.add("d-none");
         }
 
-        var target = event.target;
+        let target = event.target;
         if (target.tagName === "LI") {
             spanElement.textContent = target.textContent;
         }
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var divElement = document.querySelector(".updivspan2");
-    var ulElement = divElement.querySelector("ul");
-    var spanElement = divElement.querySelector(".span2");
+    let divElement = document.querySelector(".updivspan2");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span2");
 
     divElement.addEventListener("click", function(event) {
         if (ulElement.classList.contains("d-none")) {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ulElement.classList.add("d-none");
         }
 
-        var target = event.target;
+        let target = event.target;
         if (target.tagName === "LI") {
             spanElement.textContent = target.textContent;
         }
@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var divElement = document.querySelector(".updivspan3");
-    var ulElement = divElement.querySelector("ul");
-    var spanElement = divElement.querySelector(".span3");
+    let divElement = document.querySelector(".updivspan3");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span3");
 
     divElement.addEventListener("click", function(event) {
         if (ulElement.classList.contains("d-none")) {
@@ -52,62 +52,20 @@ document.addEventListener("DOMContentLoaded", function() {
             ulElement.classList.add("d-none");
         }
 
-        var target = event.target;
+        let target = event.target;
         if (target.tagName === "LI") {
             spanElement.textContent = target.textContent;
         }
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    var upDivSpanElement = document.querySelector(".updivspan");
-    var upDivSpan2Element = document.querySelector(".updivspan2");
-    var ulElement = upDivSpan2Element.querySelector("ul");
-    var spanElement = upDivSpan2Element.querySelector(".span2");
 
-    upDivSpanElement.addEventListener("click", function(event) {
-        var target = event.target;
-        if (target.tagName === "LI" && target.textContent === "Azerbaycan") {
-            ulElement.innerHTML = '<li>Baki</li><li>Xirdalan</li>';
-        } else if (target.tagName === "LI" && target.textContent === "suriye") {
-            ulElement.innerHTML = '<li>Halep</li><li>Hunus</li>';
-        }
-
-        ulElement.classList.remove("d-none");
-        // spanElement.textContent = target.textContent;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    var upDivSpan2Element = document.querySelector(".updivspan2");
-    var upDivSpan3Element = document.querySelector(".updivspan3");
-    var ulElement2 = upDivSpan3Element.querySelector("ul");
-    var spanElement2 = upDivSpan3Element.querySelector(".span3");
-
-    upDivSpan2Element.addEventListener("click", function(event) {
-        var target = event.target;
-        if (target.tagName === "LI") {
-            var city = target.textContent;
-            if (city === "Baki") {
-                ulElement2.innerHTML = '<li>20yanvar</li>';
-            } else if (city === "Halep") {
-                ulElement2.innerHTML = '<li>El-Bab</li>';
-            }  
-            // } else {
-            //     ulElement2.innerHTML = ''; // Hide the district list for other cities
-            // }
-
-            ulElement2.classList.remove("d-none");
-            // spanElement2.textContent = city;
-        }
-    });
-});
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    var divElement = document.querySelector(".updivspan4");
-    var ulElement = divElement.querySelector("ul");
-    var spanElement = divElement.querySelector(".span4");
+    let divElement = document.querySelector(".updivspan4");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span4");
 
     divElement.addEventListener("click", function(event) {
         if (ulElement.classList.contains("d-none")) {
@@ -116,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ulElement.classList.add("d-none");
         }
 
-        var target = event.target;
+        let target = event.target;
         if (target.tagName === "LI") {
             spanElement.textContent = target.textContent;
         }
@@ -124,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var divElement = document.querySelector(".updivspan5");
-    var ulElement = divElement.querySelector("ul");
-    var spanElement = divElement.querySelector(".span5");
+    let divElement = document.querySelector(".updivspan5");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span5");
 
     divElement.addEventListener("click", function(event) {
         if (ulElement.classList.contains("d-none")) {
@@ -135,12 +93,51 @@ document.addEventListener("DOMContentLoaded", function() {
             ulElement.classList.add("d-none");
         }
 
-        var target = event.target;
+        let target = event.target;
         if (target.tagName === "LI") {
             spanElement.textContent = target.textContent;
         }
     });
 });
 
-/* Önceki CSS kuralları burada yer alır */
 
+  
+document.addEventListener("DOMContentLoaded", function () {
+    let countryDropdown = document.getElementById("countryDropdown");
+    let cityDropdown = document.getElementById("cityDropdown");
+    let districtDropdown = document.getElementById("districtDropdown");
+    
+    let data = {
+        countries: {
+            Azerbaycan: ["Baki", "Xirdalan"],
+            suriye: ["Halep", "Hunus"],
+        },
+        cities: {
+            Baki: ["20yanvar", "ecemi"],
+            Xirdalan: ["Aff", "BAzar"],
+            Halep: ["Some", "Other"],
+            Hunus: ["More", "Options"],
+        },
+       
+    };
+    
+    function populateDropdown(dropdown, items) {
+        dropdown.innerHTML = "";
+        items.forEach((item) => {
+            let li = document.createElement("li");
+            li.textContent = item;
+            dropdown.appendChild(li);
+        });
+    }
+    
+    countryDropdown.addEventListener("click", function (event) {
+        let selectedCountry = event.target.textContent.trim();
+        populateDropdown(cityDropdown, data.countries[selectedCountry]);
+        populateDropdown(districtDropdown, []); 
+    });
+    
+    cityDropdown.addEventListener("click", function (event) {
+        let selectedCity = event.target.textContent.trim();
+        populateDropdown(districtDropdown, data.cities[selectedCity]);
+    });
+});
