@@ -141,3 +141,80 @@ document.addEventListener("DOMContentLoaded", function () {
         populateDropdown(districtDropdown, data.cities[selectedCity]);
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let divElement = document.querySelector(".updivspan6");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span6");
+
+    divElement.addEventListener("click", function(event) {
+        if (ulElement.classList.contains("d-none")) {
+            ulElement.classList.remove("d-none");
+        } else {
+            ulElement.classList.add("d-none");
+        }
+
+        let target = event.target;
+        if (target.tagName === "LI") {
+            spanElement.textContent = target.textContent;
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let divElement = document.querySelector(".updivspan7");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span7");
+
+    divElement.addEventListener("click", function(event) {
+        if (ulElement.classList.contains("d-none")) {
+            ulElement.classList.remove("d-none");
+        } else {
+            ulElement.classList.add("d-none");
+        }
+
+        let target = event.target;
+        if (target.tagName === "LI") {
+            spanElement.textContent = target.textContent;
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let divElement = document.querySelector(".updivspan8");
+    let ulElement = divElement.querySelector("ul");
+    let spanElement = divElement.querySelector(".span8");
+
+    divElement.addEventListener("click", function(event) {
+        if (ulElement.classList.contains("d-none")) {
+            ulElement.classList.remove("d-none");
+        } else {
+            ulElement.classList.add("d-none");
+        }
+
+        let target = event.target;
+        if (target.tagName === "LI") {
+            spanElement.textContent = target.textContent;
+        }
+    });
+});
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let aElement = document.querySelector('a[href=""]'); 
+
+        aElement.addEventListener('click', function (event) {
+            event.preventDefault(); 
+            
+            let commonDiv1 = document.querySelector('.commondiv1');
+            
+            if (commonDiv1.classList.contains('d-none')) {
+                commonDiv1.classList.remove('d-none'); 
+            } else {
+                commonDiv1.classList.add('d-none'); 
+            }
+        });
+    });
+
